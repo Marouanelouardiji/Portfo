@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <meta name="description" content="Personal portfolio">
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <div class="brand">
+          <a href="#top" id="brandName">Your Name</a>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+          <ul id="navMenu" class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme"></button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="hero" class="section hero">
+        <div class="container hero-inner">
+          <img id="avatar" class="avatar" src="C:\portfolio\photos\photo.jpg" alt="Profile picture" />
+          <div>
+            <h1 id="fullName">Your Name</h1>
+            <p id="role" class="role">Your Role</p>
+            <p id="summary" class="summary">Short professional summary goes here.</p>
+            <div id="socials" class="socials" aria-label="Social links"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <div id="aboutContent"></div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <h2>Skills & Languages</h2>
+          <div id="skillsContent" class="chips"></div>
+          <h3>Languages</h3>
+          <ul id="languagesList" class="list"></ul>
+        </div>
+      </section>
+
+      <section id="projects" class="section alt">
+        <div class="container">
+          <h2>Projects</h2>
+          <div id="projectsGrid" class="grid"></div>
+        </div>
+      </section>
+
+      <section id="certifications" class="section">
+        <div class="container">
+          <h2>Certifications</h2>
+          <ul id="certsList" class="timeline"></ul>
+        </div>
+      </section>
+
+      <section id="hobbies" class="section alt">
+        <div class="container">
+          <h2>Hobbies</h2>
+          <div id="hobbiesContent" class="chips"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <ul id="contactList" class="list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p id="footerCopyright">© <span id="year"></span> Your Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+  </html>
+
+
