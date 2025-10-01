@@ -1,11 +1,14 @@
-// 1) Inject hacker theme quickly
+// data.js - Enhanced Portfolio Data
 (function(){
+  // 1) Inject hacker theme quickly
   const css = `
   html,body{background:#0a0a0a;color:#bfffbf;font-family:"Fira Code",Consolas,"Courier New",monospace}
   a{color:#00ff66} h1,h2,h3{color:#00ff66;text-transform:uppercase}
   .card{background:#0e0e0e;border:1px solid #123812;border-radius:6px;padding:16px}
   `;
-  const s = document.createElement('style'); s.textContent = css; document.head.appendChild(s);
+  const s = document.createElement('style'); 
+  s.textContent = css; 
+  document.head.appendChild(s);
 })();
 
 // 2) Ensure Font Awesome present
@@ -18,6 +21,122 @@
     document.head.appendChild(l);
   }
 })();
+
+// Portfolio Data with all your information
+window.PORTFOLIO_DATA = {
+  profile: {
+    name: "Marouan El-Ouardiji",
+    role: "Cybersecurity and Embedded Systems Engineer",
+    location: "Tetouan, Morocco",
+    summary: "I am an enthusiast in the fields of Cybersecurity and Embedded Systems, driven by a passion for exploring how hardware and software interact and how they can be secured against modern threats.",
+    avatarUrl: "./photos/Marouan.jpeg",
+    socials: [
+      { label: "GitHub", href: "https://github.com/Marouanelouardiji", icon: "fa-brands fa-github", title: "GitHub" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/elouardiji-marouan-8a453a299/", icon: "fa-brands fa-linkedin", title: "LinkedIn" },
+      { label: "Email", href: "mailto:elouardijimarouan@gmail.com", icon: "fa-solid fa-envelope", title: "Email" }
+    ]
+  },
+  about: { 
+    html: `<p>I am a passionate cybersecurity and embedded systems enthusiast with a deep curiosity about how hardware and software interact at the most fundamental levels. My journey began with exploring low-level programming and evolved into a fascination with securing systems against modern threats.</p>
+
+           <p>With hands-on experience in penetration testing, network security analysis, and embedded system development, I specialize in identifying vulnerabilities and implementing robust security solutions. I'm proficient with industry-standard tools like Kali Linux, Wireshark, and Metasploit, and I enjoy the challenge of understanding complex systems from the ground up.</p>
+
+           <p>My goal is to contribute to building more secure embedded devices and infrastructure in an increasingly connected world, where the lines between physical and digital security continue to blur.</p>` 
+  },
+  skills: [
+    // Kali Linux Pentesting Tools
+    "Kali Linux", "Nmap", "Wireshark", "Metasploit", "Burp Suite", "John the Ripper",
+    "Aircrack-ng", "SQLmap", "Hydra", "Nessus", "OpenVAS", "Maltego", "Nikto",
+    
+    // Programming & Development
+    "C++", "Python", "C", "Assembly Language", "ARM Assembly", 
+    
+    // Embedded Systems & Hardware
+    "FPGA (VHDL)", "FPGA (Verilog)", "Arduino", "ESP32", "Raspberry Pi", 
+    "Embedded C", "Microcontroller Programming", "Circuit Design",
+    
+    // Database Administration
+    "Database Administration", "SQL", "MySQL", "PostgreSQL", "MongoDB",
+    
+    // Other Skills
+    "Network Security", "Penetration Testing", "Vulnerability Assessment",
+    "Linux Administration", "System Hardening", "Cryptography"
+  ],
+  languages: [
+    { name: "Amazigh", level: "Native" },
+    { name: "Arabic", level: "Bilingual" },
+    { name: "French", level: "Professional" },
+    { name: "English", level: "Professional" }
+  ],
+  projects: [
+    {
+      title: "Network Security Scanner",
+      description: "A Python-based network vulnerability scanner that identifies open ports and potential security risks using Nmap integration.",
+      tags: ["Python", "Network Security", "Nmap", "Cybersecurity"],
+      liveUrl: null,
+      repoUrl: "https://github.com/Marouanelouardiji/network-scanner",
+      imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&auto=format&fit=crop"
+    },
+    {
+      title: "Embedded System Security",
+      description: "Research and implementation of security protocols for ARM-based embedded systems with hardware encryption.",
+      tags: ["ARM Assembly", "C++", "Embedded Systems", "Security", "FPGA"],
+      liveUrl: null,
+      repoUrl: "https://github.com/Marouanelouardiji/embedded-security",
+      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&auto=format&fit=crop"
+    },
+    {
+      title: "FPGA Encryption Module",
+      description: "Hardware encryption implementation using VHDL on FPGA for enhanced security performance in embedded devices.",
+      tags: ["VHDL", "FPGA", "Encryption", "Hardware Security", "Verilog"],
+      liveUrl: null,
+      repoUrl: "https://github.com/Marouanelouardiji/fpga-encryption",
+      imageUrl: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500&auto=format&fit=crop"
+    },
+    {
+      title: "IoT Security Framework",
+      description: "Security framework for ESP32-based IoT devices with encrypted communication and secure boot implementation.",
+      tags: ["ESP32", "IoT Security", "C++", "Encryption", "Arduino"],
+      liveUrl: null,
+      repoUrl: "https://github.com/Marouanelouardiji/iot-security",
+      imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&auto=format&fit=crop"
+    },
+    {
+      title: "Database Security Audit Tool",
+      description: "Automated tool for database security auditing and vulnerability assessment with comprehensive reporting.",
+      tags: ["Python", "Database Security", "SQL", "MySQL", "PostgreSQL"],
+      liveUrl: null,
+      repoUrl: "https://github.com/Marouanelouardiji/db-security-audit",
+      imageUrl: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=500&auto=format&fit=crop"
+    },
+    {
+      title: "Kali Linux Custom Toolkit",
+      description: "Custom penetration testing toolkit with automated scripts for vulnerability scanning and exploitation.",
+      tags: ["Kali Linux", "Bash Scripting", "Penetration Testing", "Automation"],
+      liveUrl: null,
+      repoUrl: "https://github.com/Marouanelouardiji/kali-toolkit",
+      imageUrl: "https://images.unsplash.com/photo-1544890225-2f3faec4cd60?w=500&auto=format&fit=crop"
+    }
+  ],
+  certifications: [
+    { 
+      title: "eJPTv2 (eLearnSecurity Junior Penetration Tester v2)", 
+      issuer: "INE Security", 
+      date: "2025", 
+      link: "https://certs.ine.com/6ec8cf9c-f825-47b7-ba4c-e61a8f719f77#acc.WHBkZ8fz" 
+    }
+  ],
+  hobbies: [
+    "Chess", "Football", "Outdoor Activities", "Hardware Tinkering", 
+    "Ethical Hacking", "Reading", "Sports", "Hiking", "Electronics Projects"
+  ],
+  contact: [
+    { label: "Email", value: "elouardijimarouan@gmail.com", href: "mailto:elouardijimarouan@gmail.com" },
+    { label: "Location", value: "Tetouan, Morocco" },
+    { label: "GitHub", value: "github.com/Marouanelouardiji", href: "https://github.com/Marouanelouardiji" },
+    { label: "LinkedIn", value: "linkedin.com/in/elouardiji-marouan", href: "https://www.linkedin.com/in/elouardiji-marouan-8a453a299/" }
+  ]
+};
 
 // 3) Render socials using your data (creates a list at top of body)
 (function(){
@@ -32,55 +151,29 @@
   document.body.prepend(ul);
 })();
 
-window.PORTFOLIO_DATA = {
-  profile: {
-    name: "Marouan El-Ouardiji",
-    role: "Cybersecurity and embedded systems engineer ",
-    location: "Tetouan",
-    summary: "I am an enthusiast in the fields of Cybersecurity and Embedded Systems, driven by a passion for exploring how hardware and software interact and how they can be secured against modern threats. My journey combines curiosity about low-level systems with a strong focus on offensive and defensive security practices.",
-    avatarUrl: "./photos/photo.jpg",
-    socials: [
-      { label: "GitHub", href: "https://github.com/Marouanelouardiji", icon: "fa-brands fa-github", title: "GitHub" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/in/elouardiji-marouan-8a453a299/", icon: "fa-brands fa-linkedin", title: "LinkedIn" },
-      { label: "Email", href: "mailto:elouardijimarouan@gmail.com", icon: "fa-solid fa-envelope", title: "Email" }
-    ]
-  },
-  about: { html: "<p>I am deeply passionate about ethical hacking and the field of cybersecurity, always striving to understand how systems can be strengthened against real-world threats. My curiosity doesn’t stop there—I am equally fascinated by embedded systems and the critical role they play in our connected world. I want to explore how these systems operate at a low level, uncover potential vulnerabilities, and contribute to building secure and resilient solutions. Combining my enthusiasm for cybersecurity with my interest in embedded technologies, I aim to be actively involved in securing both digital infrastructures and the smart devices that shape our future.Write a longer description about your background, values, and career goals.</p>" },
-  skills: ["Kali Linux", "Nmap", "Wireshark", "Metasploit", "Python", "C", "C++", "Assembly Language", "ARM Assembly"],
-  languages: [
-    { name: "Arabic", level: "Native" },
-    { name: "French", level: "Professional" },
-    { name: "English", level: "Professional" }
-  ],
-  projects: [
-    {
-      title: "Project One",
-      description: "Concise one-line description of what the project does and why it matters.",
-      tags: ["React", "API", "UI"],
-      liveUrl: "https://example.com/project-one",
-      repoUrl: "https://github.com/yourname/project-one",
-      imageUrl: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop"
-    },
-    {
-      title: "Project Two",
-      description: "Another project with a short summary, highlighting tech and outcomes.",
-      tags: ["Node", "Express", "MongoDB"],
-      liveUrl: null,
-      repoUrl: "https://github.com/yourname/project-two",
-      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
+// Initialize the portfolio when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Portfolio data loaded successfully!');
+  
+  // If main.js doesn't load the data, this will help
+  setTimeout(() => {
+    const data = window.PORTFOLIO_DATA;
+    if (data && data.profile) {
+      // Basic fallback to ensure data displays
+      if (document.getElementById('fullName')) {
+        document.getElementById('fullName').textContent = data.profile.name;
+      }
+      if (document.getElementById('role')) {
+        document.getElementById('role').textContent = data.profile.role;
+      }
+      if (document.getElementById('summary')) {
+        document.getElementById('summary').textContent = data.profile.summary;
+      }
     }
-  ],
-  certifications: [
-    { title: "ejptv2", issuer: "INE security", date: "2025", link: "https://certs.ine.com/6ec8cf9c-f825-47b7-ba4c-e61a8f719f77#acc.WHBkZ8fz" },
-  ],
-  hobbies: ["Sports", "Chess", "Reading"],
-  contact: [
-    { label: "Email", value: "elouardijimarouan@gmail.com", href: "elouardijimarouan@gmail.com" },
-    { label: "Location", value: "Tetouan , Morocco" }
-  ]
-};
+  }, 100);
+});
 
-// Quick binary background test
+// Binary background
 const style = document.createElement('style');
 style.textContent = `
 html, body {
@@ -89,7 +182,34 @@ html, body {
   background-size: 320px 320px;
   background-attachment: fixed;
 }
+
+/* Additional hacker theme styles */
+.terminal-text {
+  color: #00ff66;
+  text-shadow: 0 0 5px #00ff66;
+}
+
+.hacker-glow {
+  box-shadow: 0 0 10px #00ff66;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #00ff66;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00ff66; }
+}
 `;
 document.head.appendChild(style);
-
-
