@@ -36,6 +36,7 @@ window.PORTFOLIO_DATA = {
       { label: "Email", href: "mailto:elouardijimarouan@gmail.com", icon: "fa-solid fa-envelope", title: "Email" }
     ]
   },
+  
   about: { 
     html: `<p>I am a passionate cybersecurity and embedded systems enthusiast with a deep curiosity about how hardware and software interact at the most fundamental levels. My journey began with exploring low-level programming and evolved into a fascination with securing systems against modern threats.</p>
 
@@ -68,62 +69,66 @@ window.PORTFOLIO_DATA = {
     { name: "French", level: "Professional" },
     { name: "English", level: "Professional" }
   ],
+  
+  // NOUVEAUX PROJETS MIS À JOUR ICI
   projects: [
     {
-      title: "Network Security Scanner",
-      description: "A Python-based network vulnerability scanner that identifies open ports and potential security risks using Nmap integration.",
-      tags: ["Python", "Network Security", "Nmap", "Cybersecurity"],
+      title: "Phishing Simulation Campaign with GoPhish",
+      description: "Executed a controlled phishing campaign using **GoPhish** in a test environment to raise awareness among university students about **social engineering**. Involved setting up the infrastructure, executing the campaign, and analyzing click-through rates.",
+      tags: ["GoPhish", "Social Engineering", "Cybersecurity", "Awareness", "Testing"],
       liveUrl: null,
-      repoUrl: "https://github.com/Marouanelouardiji/network-scanner",
-      imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&auto=format&fit=crop"
+      repoUrl: null, // Si pas de repo public
+      imageUrl: "https://placehold.co/600x400/001a00/00ff66?text=GOPHISH+SIMULATION" 
     },
     {
-      title: "Embedded System Security",
-      description: "Research and implementation of security protocols for ARM-based embedded systems with hardware encryption.",
-      tags: ["ARM Assembly", "C++", "Embedded Systems", "Security", "FPGA"],
+      title: "ESP32 Hardware Honeypot Development",
+      description: "Designed and developed an **ESP32-based hardware Honeypot** to emulate common IoT services (TCP/HTTP/MQTT). The system collects and analyzes attack attempts in an isolated environment, providing detailed detection reports and hardening recommendations.",
+      tags: ["ESP32", "Honeypot", "IoT Security", "MQTT", "Embedded C++", "Network Analysis"],
       liveUrl: null,
-      repoUrl: "https://github.com/Marouanelouardiji/embedded-security",
-      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&auto=format&fit=crop"
+      repoUrl: null, // Si pas de repo public
+      imageUrl: "https://placehold.co/600x400/001a00/00ff66?text=IOT+HONEYPOT+ESP32" 
     },
     {
-      title: "FPGA Encryption Module",
-      description: "Hardware encryption implementation using VHDL on FPGA for enhanced security performance in embedded devices.",
-      tags: ["VHDL", "FPGA", "Encryption", "Hardware Security", "Verilog"],
+      title: "Access System with DFIR Integration",
+      description: "Project implementing a secured access system managed by **ESP32** with a **web interface** and database integration. The system includes **Digital Forensics and Incident Response (DFIR)** capabilities for logging and analyzing access events.",
+      tags: ["ESP32", "DFIR", "Web Interface", "MySQL", "Access Control", "Security"],
       liveUrl: null,
-      repoUrl: "https://github.com/Marouanelouardiji/fpga-encryption",
-      imageUrl: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500&auto=format&fit=crop"
+      repoUrl: null, 
+      imageUrl: "https://placehold.co/600x400/001a00/00ff66?text=DFIR+ACCESS+SYSTEM" 
     },
     {
-      title: "IoT Security Framework",
-      description: "Security framework for ESP32-based IoT devices with encrypted communication and secure boot implementation.",
-      tags: ["ESP32", "IoT Security", "C++", "Encryption", "Arduino"],
+      title: "CyberGuardians Club Website (Frontend)",
+      description: "Concept and **Frontend development** of the official website user interface for the CyberGuardians Club (ENSA Tétouan), focusing on a modern, responsive, and secure presentation.",
+      tags: ["HTML5", "CSS3", "JavaScript", "Frontend", "UI/UX Design"],
       liveUrl: null,
-      repoUrl: "https://github.com/Marouanelouardiji/iot-security",
-      imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&auto=format&fit=crop"
+      repoUrl: null, 
+      imageUrl: "https://placehold.co/600x400/001a00/00ff66?text=CYBERGUARD+CLUB+WEB" 
     },
-    {
-      title: "Database Security Audit Tool",
-      description: "Automated tool for database security auditing and vulnerability assessment with comprehensive reporting.",
-      tags: ["Python", "Database Security", "SQL", "MySQL", "PostgreSQL"],
-      liveUrl: null,
-      repoUrl: "https://github.com/Marouanelouardiji/db-security-audit",
-      imageUrl: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=500&auto=format&fit=crop"
-    },
-    {
-      title: "Kali Linux Custom Toolkit",
-      description: "Custom penetration testing toolkit with automated scripts for vulnerability scanning and exploitation.",
-      tags: ["Kali Linux", "Bash Scripting", "Penetration Testing", "Automation"],
-      liveUrl: null,
-      repoUrl: "https://github.com/Marouanelouardiji/kali-toolkit",
-      imageUrl: "https://images.unsplash.com/photo-1544890225-2f3faec4cd60?w=500&auto=format&fit=crop"
-    }
+    // Remplacement des anciens projets si l'utilisateur n'en voulait que des nouveaux
   ],
+  
+  // NOUVELLE ÉDUCATION MISE À JOUR ICI (certifications sert de section éducation/timeline dans ce template)
   certifications: [
+    {
+      title: "2nd Year Engineering Cycle in Cybersecurity and Embedded Systems",
+      issuer: "ENSA Tétouan",
+      date: "2024 - Present",
+      description: "Advanced study focusing on information systems security, network defense, ethical hacking, and secure embedded device development.",
+      icon: "fas fa-user-graduate",
+    },
+    {
+      title: "Integrated Preparatory Classes (2 Years)",
+      issuer: "ENSA Tétouan",
+      date: "2022 - 2024",
+      description: "Intensive scientific and technical curriculum preparing for the engineering cycle, covering core subjects like Mathematics, Physics, and Computer Science.",
+      icon: "fas fa-school",
+    },
     { 
       title: "eJPTv2 (eLearnSecurity Junior Penetration Tester v2)", 
       issuer: "INE Security", 
       date: "2025", 
-      link: "https://certs.ine.com/6ec8cf9c-f825-47b7-ba4c-e61a8f719f77#acc.WHBkZ8fz" 
+      link: "https://certs.ine.com/6ec8cf9c-f825-47b7-ba4c-e61a8f719f77#acc.WHBkZ8fz",
+      icon: "fas fa-certificate",
     }
   ],
   hobbies: [
